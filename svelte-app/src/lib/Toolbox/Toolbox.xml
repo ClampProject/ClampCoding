@@ -77,6 +77,7 @@
         <block type="controls_mouseoob" />
         <block type="controls_mousex" />
         <block type="controls_mousey" />
+        <block type="controls_keypressed" />
     </category>
     <sep class="bt"/>
     <category name="Variables" custom="variables" colour="#4CBEFF"></category>
