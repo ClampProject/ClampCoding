@@ -2,27 +2,27 @@
     import { onMount } from "svelte";
 
     // Components
-    import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
-    import NavigationMargin from "$lib/NavigationBar/NavigationMargin.svelte";
-    import NavigationOption from "$lib/NavigationBar/NavigationOption.svelte";
-    import NavigationOptionMenu from "$lib/NavigationBar/NavigationOptionMenu.svelte";
+    import NavigationBar from "#lib/NavigationBar/NavigationBar.svelte";
+    import NavigationMargin from "#lib/NavigationBar/NavigationMargin.svelte";
+    import NavigationOption from "#lib/NavigationBar/NavigationOption.svelte";
+    import NavigationOptionMenu from "#lib/NavigationBar/NavigationOptionMenu.svelte";
 
-    import GamePlayer from "$lib/GamePlayer/Player.svelte";
-    import SoundEditor from "$lib/SoundEditor/Editor.svelte";
-    import ImageEditor from "$lib/ImageEditor/Editor.svelte";
+    import GamePlayer from "#lib/GamePlayer/Player.svelte";
+    import SoundEditor from "#lib/SoundEditor/Editor.svelte";
+    import ImageEditor from "#lib/ImageEditor/Editor.svelte";
     
     // Modals
-    import ModalNewVariable from "$lib/Modals/NewVariable.svelte";
-    import ModalSettings from "$lib/Settings/Component.svelte";
+    import ModalNewVariable from "#lib/Modals/NewVariable.svelte";
+    import ModalSettings from "#lib/Settings/Component.svelte";
 
     // Toolbox
-    import Toolbox from "$lib/Toolbox/Toolbox.xml?raw";
+    import Toolbox from "#lib/Toolbox/Toolbox.xml?raw";
 
     import JSZip from "jszip";
     import * as FileSaver from "file-saver";
     import fileDialog from "../resources/fileDialog";
     import { playSound, preloadSounds } from "../resources/editor/sounds.js";
-    import ImageLibrary from "$lib/ImageEditor/library.json";
+    import ImageLibrary from "#lib/ImageEditor/library.json";
     import { saveFormatVersion } from "../resources/state/download";
     import SettingsAPI from "../resources/editor/settings-api";
 
@@ -54,7 +54,7 @@
     Blockly.FieldGridDropdown = FieldGridDropdown;
     Blockly.FieldSlider = FieldSlider;
 
-    import BlocklyComponent from "$lib/svelte-blockly";
+    import BlocklyComponent from "#lib/svelte-blockly/index.js";
     let blocklyToolboxIsVisible = true;
 
     import State from "../resources/state";

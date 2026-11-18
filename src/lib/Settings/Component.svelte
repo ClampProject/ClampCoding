@@ -1,7 +1,7 @@
 <script>
     import MarkdownIt from "markdown-it";
 
-    import { activeModals } from '$lib/stores.js';
+    import { activeModals } from '#lib/stores.js';
     import { browser } from '$app/environment';
     import '../../styles/library.css';
 
