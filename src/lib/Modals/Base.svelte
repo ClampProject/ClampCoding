@@ -2,14 +2,14 @@
     <div class="modal-title">
         <h1>Settings</h1>
     </div>
-    <div class="modal-contents" />
+    <div class="modal-contents"></div>
     <div class="modal-footer">
         <button class="modal-exit">
             OK
         </button>
     </div>
 </div>
-<div class="backing" />
+<div class="backing"></div>
 
 <style>
     .modal {

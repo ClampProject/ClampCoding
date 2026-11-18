@@ -778,29 +778,6 @@
                                             character.id}
                                         on:click={() => switchCharacter(character.id)}
                                     >
-                                        <!-- del button -->
-                                        <button
-                                            class="delete-image-button"
-                                            style={State.currentProject.characters
-                                                .length <= 1
-                                                ? "cursor: not-allowed"
-                                                : ""}
-                                            on:click={(event) =>
-                                                State.currentProject.characters.length <= 1
-                                                    ? null
-                                                    : deleteCharacter(character.id, event.shiftKey)}
-                                        >
-                                            <!-- svelte-ignore a11y-img-redundant-alt -->
-                                            <img
-                                                src="/images/gui-icons/cancel-icon.png"
-                                                alt="Delete this Character"
-                                                title="Delete this Character"
-                                                style={State.currentProject.characters
-                                                    .length <= 1
-                                                    ? "filter: grayscale(1)"
-                                                    : ""}
-                                            />
-                                        </button>
                                         <!-- image -->
                                         <img
                                             alt={character.name}
@@ -809,6 +786,29 @@
                                             src={State.getImageById(
                                                 character.startCostume
                                             ).image}
+                                        />
+                                    </button>
+                                    <!-- del button -->
+                                    <button
+                                        class="delete-image-button"
+                                        style={State.currentProject.characters
+                                            .length <= 1
+                                            ? "cursor: not-allowed"
+                                            : ""}
+                                        on:click={(event) =>
+                                            State.currentProject.characters.length <= 1
+                                                ? null
+                                                : deleteCharacter(character.id, event.shiftKey)}
+                                    >
+                                        <!-- svelte-ignore a11y-img-redundant-alt -->
+                                        <img
+                                            src="/images/gui-icons/cancel-icon.png"
+                                            alt="Delete this Character"
+                                            title="Delete this Character"
+                                            style={State.currentProject.characters
+                                                .length <= 1
+                                                ? "filter: grayscale(1)"
+                                                : ""}
                                         />
                                     </button>
                                     <p class="character-preview-name">

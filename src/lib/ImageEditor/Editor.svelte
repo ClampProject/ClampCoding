@@ -354,33 +354,33 @@
                         data-selected={selectedCostume === costumeId}
                         on:click={() => selectCostume(costumeId)}
                     >
-                        <button
-                            class="delete-image-button"
-                            style={targetObj.costumes
-                                .length <= 1
-                                ? "cursor: not-allowed"
-                                : ""}
-                            on:click={(event) =>
-                                targetObj.costumes.length <= 1
-                                    ? null
-                                    : deleteCostume(costumeId, event.shiftKey)}
-                        >
-                            <!-- svelte-ignore a11y-img-redundant-alt -->
-                            <img
-                                src="/images/gui-icons/cancel-icon.png"
-                                alt="Delete this Image"
-                                title="Delete this Image"
-                                style={targetObj.costumes
-                                    .length <= 1
-                                    ? "filter: grayscale(1)"
-                                    : ""}
-                            />
-                        </button>
                         <img
                             alt={State.getImageById(costumeId).name}
                             title={State.getImageById(costumeId).name}
                             class="image-preview"
                             src={State.getImageById(costumeId).image}
+                        />
+                    </button>
+                    <button
+                        class="delete-image-button"
+                        style={targetObj.costumes
+                            .length <= 1
+                            ? "cursor: not-allowed"
+                            : ""}
+                        on:click={(event) =>
+                            targetObj.costumes.length <= 1
+                                ? null
+                                : deleteCostume(costumeId, event.shiftKey)}
+                    >
+                        <!-- svelte-ignore a11y-img-redundant-alt -->
+                        <img
+                            src="/images/gui-icons/cancel-icon.png"
+                            alt="Delete this Image"
+                            title="Delete this Image"
+                            style={targetObj.costumes
+                                .length <= 1
+                                ? "filter: grayscale(1)"
+                                : ""}
                         />
                     </button>
                     <p class="costume-name">

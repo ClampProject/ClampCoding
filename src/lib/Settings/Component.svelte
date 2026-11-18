@@ -14,7 +14,7 @@
     import SettingsInputType from '../../resources/enums/settings-input-types';
     import SettingsRestrictionType from '../../resources/enums/settings-restriction-types';
     
-    let libraryContent = [];
+    let libraryContent = $state([]);
     const createLibrarySections = () => {
         libraryContent = [];
 
@@ -34,10 +34,10 @@
         saveSetting,
     });
 
-    let currentSection = [];
+    let currentSection = $state([]);
     let currentSectionPrefix = 'undefined';
-    let selectedSection = 'project';
-    const loadedInputs = {};
+    let selectedSection = $state('project');
+    const loadedInputs = $state({});
     activeModals.subscribe((newModals) => {
         if (newModals.settings) {
             createLibrarySections();
@@ -164,7 +164,7 @@
                         <button
                             data-id={section.id}
                             data-selected={selectedSection === section.id}
-                            on:click={() => {
+                            onclick={() => {
                                 playSound("tabswitch");
                                 selectSection(section.id);
                             }}
@@ -204,7 +204,7 @@
         <div class="library-footer">
             <button
                 class="library-exit"
-                on:click={() => {
+                onclick={() => {
                     $activeModals.settings = false;
                     playSound("tabswitch");
                 }}
@@ -213,7 +213,7 @@
             </button>
         </div>
     </div>
-    <div class="backing" />
+    <div class="backing"></div>
 {/if}
 
 <style>

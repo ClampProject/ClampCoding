@@ -1,18 +1,22 @@
 <script>
     import { playSound } from "../../resources/editor/sounds";
 
-    export let icon = "";
-    export let name = "";
-    export let style = "";
+    /** @type {{icon?: string, name?: string, style?: string, children?: import('svelte').Snippet}} */
+    let {
+        icon = "",
+        name = "",
+        style = "",
+        children
+    } = $props();
 
-    let showingMenu = false;
+    let showingMenu = $state(false);
     const toggleMenu = () => {
         showingMenu = !showingMenu;
         playSound('tabswitch');
     };
 </script>
 
-<button {style} on:click={toggleMenu}>
+<button {style} onclick={toggleMenu}>
     {#if icon}
         <img
             alt={name}
@@ -27,7 +31,7 @@
 
     {#if showingMenu}
         <div class="dialog-menu">
-            <slot />
+            {@render children?.()}
         </div>
     {/if}
 </button>

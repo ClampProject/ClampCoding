@@ -1,23 +1,23 @@
 <!-- Modified version of svelte-blockly -->
 <!-- https://www.npmjs.com/package/svelte-blockly -->
 
-<script context="module"></script>
+<script module></script>
 
 <script>
+    import { run } from 'svelte/legacy';
+
     import { createEventDispatcher } from "svelte";
     import Blockly from "blockly/core.js";
     import registerDynamicCategories from "../../resources/categories";
-    export let config = {};
-    export let locale;
-    export let workspace = undefined;
-    export let transform = undefined;
-    $: {
-        // evaluate transform to establish a reactive dependency
-        transform;
-        applyTransform();
-    }
+    /** @type {{config?: any, locale: any, workspace?: any, transform?: any}} */
+    let {
+        config = {},
+        locale,
+        workspace = $bindable(undefined),
+        transform = $bindable(undefined)
+    } = $props();
     const dispatch = createEventDispatcher();
-    let width, height;
+    let width = $state(), height = $state();
     function initRoot(root, param) {
         function injectWorkspace(dom, { config, locale: { msg, rtl } }) {
             Blockly.setLocale(msg);
@@ -84,14 +84,19 @@
             workspace.scroll(scrollX, scrollY);
         }
     }
-    $: {
+    run(() => {
+        // evaluate transform to establish a reactive dependency
+        transform;
+        applyTransform();
+    });
+    run(() => {
         // evaluate width & height to establish a reactive dependency
         width;
         height;
         if (workspace) {
             Blockly.svgResize(workspace);
         }
-    }
+    });
     // TODO this breaks smooth scrolling; for now, transform is read-only
     // $: {
     // 	if (workspace && transform) {
@@ -107,7 +112,7 @@
     bind:offsetWidth={width}
     bind:offsetHeight={height}
     use:initRoot={{ config, locale }}
-/>
+></div>
 
 <style>
     .root {
