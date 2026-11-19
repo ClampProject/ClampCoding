@@ -12,11 +12,11 @@
     
     import exposeWindow from "../../resources/exposeWindow";
 
-    let canvas;
+    let canvas = $state();
     let currentEmitter;
-    let isFullscreen = false;
+    let isFullscreen = $state(false);
     let gameEngine;
-    let transformStyle = "";
+    let transformStyle = $state("");
 
     function runCodeInEngine(code) {
         if (currentEmitter) currentEmitter.dispose();
@@ -113,7 +113,7 @@
     bind:this={canvas}
     class={"canvas " + (isFullscreen ? "fullscreen" : "")}
     style={isFullscreen ? "transform:" + transformStyle : ""}
-/>
+></div>
 
 <style>
     .canvas {

@@ -1,7 +1,9 @@
 <script>
-    import { activeModals } from '$lib/stores.js';
+    import { activeModals } from '#lib/stores.js';
 
-    import NavigationOption from "$lib/NavigationBar/NavigationOption.svelte";
+    import NavigationOption from "#lib/NavigationBar/NavigationOption.svelte";
+    /** @type {{children?: import('svelte').Snippet}} */
+    let { children } = $props();
 </script>
 
 <div>
@@ -17,7 +19,7 @@
         class="logo-margin"
         style="height: 100%;"
     />
-    <slot />
+    {@render children?.()}
 
     <NavigationOption
         name="Settings"

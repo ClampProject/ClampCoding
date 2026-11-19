@@ -2,8 +2,7 @@
 // its related to js generator and how its imported
 // so lets just import it the way that it wants
 // this is also usefull for injecting functions
-import pkg from 'blockly/javascript.js';
-const { javascriptGenerator } = pkg;
+import { javascriptGenerator } from 'blockly/javascript';
 
 const oldValueToCode = javascriptGenerator.valueToCode 
 javascriptGenerator.valueToCode = function(block, name, order) {

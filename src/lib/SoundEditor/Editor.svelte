@@ -1,7 +1,8 @@
 <script>
     import State from "../../resources/state";
 
-    export let target;
+    /** @type {{target: any}} */
+    let { target } = $props();
 
     function playSoundId(soundId) {
         const sound = State.getSoundById(soundId);
@@ -16,7 +17,7 @@
 <div class="main">
     <p style="margin-left:8px">• {State.getTargetById(target).name}</p>
     {#each State.getTargetById(target).sounds as soundId}
-        <button on:click={() => playSoundId(soundId)}>
+        <button onclick={() => playSoundId(soundId)}>
             <p>Play {State.getSoundById(soundId).name}</p>
         </button>
     {/each}

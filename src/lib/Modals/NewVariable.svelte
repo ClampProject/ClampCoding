@@ -1,10 +1,11 @@
 <script>
     import Emitter from "../../resources/emitter";
     import { playSound } from "../../resources/editor/sounds";
-    export let workspace;
+    /** @type {{workspace: any}} */
+    let { workspace } = $props();
 
-    let inDisplay = false;
-    let currentDisplay = {
+    let inDisplay = $state(false);
+    let currentDisplay = $state({
         eventId: '_',
         id: "_", // target ID
         name: 'variable', // name of the object we are creating in the menu
@@ -13,11 +14,11 @@
             { name: 'For this character', value: 'character' },
             { name: 'For the whole project', value: 'project' },
         ],
-    };
+    });
     const queue = [];
 
-    let varName = '';
-    let varType = '';
+    let varName = $state('');
+    let varType = $state('');
 
     const evaluateState = () => {
         if (queue.length <= 0) {
@@ -91,15 +92,15 @@
             {/if}
         </div>
         <div class="modal-footer">
-            <button class="modal-exit" on:click={() => closeMenu(false)}>
+            <button class="modal-exit" onclick={() => closeMenu(false)}>
                 Create
             </button>
-            <button class="modal-exit gray" on:click={() => closeMenu(true)}>
+            <button class="modal-exit gray" onclick={() => closeMenu(true)}>
                 Cancel
             </button>
         </div>
     </div>
-    <div class="backing" />
+    <div class="backing"></div>
 {/if}
 
 <style>

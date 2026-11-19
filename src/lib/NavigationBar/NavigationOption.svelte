@@ -4,9 +4,13 @@
   
     const dispatch = createEventDispatcher();
 
-    export let icon = "";
-    export let name = "";
-    export let style = "";
+  /** @type {{icon?: string, name?: string, style?: string, children?: import('svelte').Snippet}} */
+  let {
+    icon = "",
+    name = "",
+    style = "",
+    children
+  } = $props();
 
     function event() {
         playSound("tabswitch");
@@ -14,8 +18,8 @@
     }
 </script>
 
-<button {style} on:click={event}>
-    <slot />
+<button {style} onclick={event}>
+    {@render children?.()}
     {#if icon}
         <img
             alt={name}

@@ -1,4 +1,4 @@
-import Blockly from 'blockly/core';
+import * as Blockly from 'blockly/core';
 import javascriptGenerator from '../javascriptGenerator';
 import convertArgToBlock from '../argBlocks'
 
@@ -26,5 +26,5 @@ export default (blockName, jsonData, compileFunction) => {
     Blockly.Blocks[blockName] = blockObject
 
     // register block compile function
-    javascriptGenerator[blockName] = compileFunction;
+    javascriptGenerator.forBlock[blockName] = compileFunction;
 }

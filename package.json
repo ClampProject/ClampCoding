@@ -4,27 +4,32 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build --force",
+		"build": "vite build",
 		"preview": "vite preview"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.5.0",
-		"svelte": "^3.54.0",
-		"vite": "^4.3.0"
+		"@sveltejs/adapter-static": "^4.0.1",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.0.0",
+		"svelte": "^5.57.2",
+		"vite": "^8.0.12"
 	},
 	"type": "module",
 	"dependencies": {
-		"@blockly/continuous-toolbox": "^3.0.16",
-		"@blockly/field-colour-hsv-sliders": "^4.2.0",
-		"@blockly/field-dependent-dropdown": "^3.0.11",
-		"@blockly/field-grid-dropdown": "^4.0.10",
-		"@blockly/field-slider": "^6.1.4",
-		"@blockly/theme-dark": "^4.0.10",
-		"@sveltejs/adapter-vercel": "^3.0.0",
-		"blockly": "^9.0.0",
+		"@blockly/continuous-toolbox": "^13.4.0",
+		"@blockly/field-angle": "^13.4.0",
+		"@blockly/field-colour-hsv-sliders": "^13.4.0",
+		"@blockly/field-dependent-dropdown": "^13.4.0",
+		"@blockly/field-grid-dropdown": "^13.4.0",
+		"@blockly/field-slider": "^13.4.0",
+		"@blockly/theme-dark": "^13.4.0",
+		"blockly": "^13.4.0",
 		"file-saver": "^2.0.5",
 		"jszip": "^3.10.1",
 		"markdown-it": "^14.1.0"
+	},
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
 	}
 }

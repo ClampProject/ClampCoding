@@ -2,33 +2,34 @@
     import { onMount } from "svelte";
 
     // Components
-    import NavigationBar from "$lib/NavigationBar/NavigationBar.svelte";
-    import NavigationMargin from "$lib/NavigationBar/NavigationMargin.svelte";
-    import NavigationOption from "$lib/NavigationBar/NavigationOption.svelte";
-    import NavigationOptionMenu from "$lib/NavigationBar/NavigationOptionMenu.svelte";
+    import NavigationBar from "#lib/NavigationBar/NavigationBar.svelte";
+    import NavigationMargin from "#lib/NavigationBar/NavigationMargin.svelte";
+    import NavigationOption from "#lib/NavigationBar/NavigationOption.svelte";
+    import NavigationOptionMenu from "#lib/NavigationBar/NavigationOptionMenu.svelte";
 
-    import GamePlayer from "$lib/GamePlayer/Player.svelte";
-    import SoundEditor from "$lib/SoundEditor/Editor.svelte";
-    import ImageEditor from "$lib/ImageEditor/Editor.svelte";
+    import GamePlayer from "#lib/GamePlayer/Player.svelte";
+    import SoundEditor from "#lib/SoundEditor/Editor.svelte";
+    import ImageEditor from "#lib/ImageEditor/Editor.svelte";
     
     // Modals
-    import ModalNewVariable from "$lib/Modals/NewVariable.svelte";
-    import ModalSettings from "$lib/Settings/Component.svelte";
+    import ModalNewVariable from "#lib/Modals/NewVariable.svelte";
+    import ModalSettings from "#lib/Settings/Component.svelte";
 
     // Toolbox
-    import Toolbox from "$lib/Toolbox/Toolbox.xml?raw";
+    import Toolbox from "#lib/Toolbox/Toolbox.xml?raw";
 
     import JSZip from "jszip";
     import * as FileSaver from "file-saver";
     import fileDialog from "../resources/fileDialog";
     import { playSound, preloadSounds } from "../resources/editor/sounds.js";
-    import ImageLibrary from "$lib/ImageEditor/library.json";
+    import ImageLibrary from "#lib/ImageEditor/library.json";
     import { saveFormatVersion } from "../resources/state/download";
     import SettingsAPI from "../resources/editor/settings-api";
 
-    import Blockly from "blockly/core";
+    import * as Blockly from 'blockly/core';
     import DarkTheme from "@blockly/theme-dark";
     import * as ContinuousToolboxPlugin from "@blockly/continuous-toolbox";
+    ContinuousToolboxPlugin.registerContinuousToolbox();
     import Patches from "../patches";
 
     // edit theme stuff so we match scratch a bit
@@ -41,20 +42,18 @@
         size: 12,
     };
 
-    import En from "blockly/msg/en";
+    import * as En from 'blockly/msg/en';
     import "blockly/blocks";
 
     // used by blocks sometimes, but mostly custom scripts
-    import { FieldDependentDropdown } from '@blockly/field-dependent-dropdown';
-    import { FieldColourHsvSliders } from '@blockly/field-colour-hsv-sliders';
-    import { FieldGridDropdown } from '@blockly/field-grid-dropdown';
-    import { FieldSlider } from '@blockly/field-slider';
-    Blockly.FieldDependentDropdown = FieldDependentDropdown;
-    Blockly.FieldColourHsvSliders = FieldColourHsvSliders;
-    Blockly.FieldGridDropdown = FieldGridDropdown;
-    Blockly.FieldSlider = FieldSlider;
+    import '@blockly/field-dependent-dropdown';
+    import '@blockly/field-colour-hsv-sliders';
+    import '@blockly/field-grid-dropdown';
+    import '@blockly/field-slider';
+    import {registerFieldAngle} from '@blockly/field-angle';
+    registerFieldAngle();
 
-    import BlocklyComponent from "$lib/svelte-blockly";
+    import BlocklyComponent from "#lib/svelte-blockly/index.js";
     let blocklyToolboxIsVisible = true;
 
     import State from "../resources/state";
@@ -133,7 +132,6 @@
 
     Patches.Blockly.ToolboxFlyout(Blockly, config);
     Patches.Blockly.FlyoutButton(Blockly);
-    Patches.Blockly.Renderer(Blockly);
     
     let workspace;
     let compiler;
@@ -778,29 +776,6 @@
                                             character.id}
                                         on:click={() => switchCharacter(character.id)}
                                     >
-                                        <!-- del button -->
-                                        <button
-                                            class="delete-image-button"
-                                            style={State.currentProject.characters
-                                                .length <= 1
-                                                ? "cursor: not-allowed"
-                                                : ""}
-                                            on:click={(event) =>
-                                                State.currentProject.characters.length <= 1
-                                                    ? null
-                                                    : deleteCharacter(character.id, event.shiftKey)}
-                                        >
-                                            <!-- svelte-ignore a11y-img-redundant-alt -->
-                                            <img
-                                                src="/images/gui-icons/cancel-icon.png"
-                                                alt="Delete this Character"
-                                                title="Delete this Character"
-                                                style={State.currentProject.characters
-                                                    .length <= 1
-                                                    ? "filter: grayscale(1)"
-                                                    : ""}
-                                            />
-                                        </button>
                                         <!-- image -->
                                         <img
                                             alt={character.name}
@@ -809,6 +784,29 @@
                                             src={State.getImageById(
                                                 character.startCostume
                                             ).image}
+                                        />
+                                    </button>
+                                    <!-- del button -->
+                                    <button
+                                        class="delete-image-button"
+                                        style={State.currentProject.characters
+                                            .length <= 1
+                                            ? "cursor: not-allowed"
+                                            : ""}
+                                        on:click={(event) =>
+                                            State.currentProject.characters.length <= 1
+                                                ? null
+                                                : deleteCharacter(character.id, event.shiftKey)}
+                                    >
+                                        <!-- svelte-ignore a11y-img-redundant-alt -->
+                                        <img
+                                            src="/images/gui-icons/cancel-icon.png"
+                                            alt="Delete this Character"
+                                            title="Delete this Character"
+                                            style={State.currentProject.characters
+                                                .length <= 1
+                                                ? "filter: grayscale(1)"
+                                                : ""}
                                         />
                                     </button>
                                     <p class="character-preview-name">

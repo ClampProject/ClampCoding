@@ -1,4 +1,4 @@
-import Blockly from 'blockly/core';
+import * as Blockly from 'blockly/core';
 import State from '../state';
 import Random from '../random';
 import Emitter from '../emitter';
