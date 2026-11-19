@@ -4,7 +4,7 @@
     <p>
         <a href="https://github.com/JeremyGamer13">JeremyGamer13</a>,
         <a href="https://github.com/RedMan13">godslayerakp</a>,
-        <a href="https://github.com/FreshPenguin112">FreshPenguin112</a>
+        <a href="https://github.com/jwklong">jwklong</a>
     </p>
     <br />
     <h2>Images:</h2>
