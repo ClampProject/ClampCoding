@@ -132,7 +132,6 @@
 
     Patches.Blockly.ToolboxFlyout(Blockly, config);
     Patches.Blockly.FlyoutButton(Blockly);
-    Patches.Blockly.Renderer(Blockly);
     
     let workspace;
     let compiler;
