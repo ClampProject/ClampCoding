@@ -114,7 +114,7 @@
         scrollbars: true,
         disable: false,
         theme: DarkTheme,
-        renderer: "custom_renderer",
+        renderer: "zelos",
         zoom: {
             controls: true,
             wheel: true,
@@ -188,9 +188,9 @@
         console.log("ignore the warnings above we dont care about those");
 
         preloadSounds([
-            "/sounds/confirm.mp3",
-            "/sounds/explode.mp3",
-            "/sounds/tabswitch.mp3",
+            "./sounds/confirm.mp3",
+            "./sounds/explode.mp3",
+            "./sounds/tabswitch.mp3",
         ]);
 
         window.onbeforeunload = () => "";
@@ -452,17 +452,17 @@
 <NavigationBar inEditor={true}>
     <NavigationOptionMenu
         name="File"
-        icon="/images/gui-icons/page-white-icon.png"
+        icon="./images/gui-icons/page-white-icon.png"
     >
         <NavigationOption
             name="Import"
-            icon="/images/gui-icons/page-white-put-icon.png"
+            icon="./images/gui-icons/page-white-put-icon.png"
             style="height:48px;width:100%"
             on:click={loadProject}
         />
         <NavigationOption
             name="Download"
-            icon="/images/gui-icons/disk-icon.png"
+            icon="./images/gui-icons/disk-icon.png"
             style="height:48px;width:100%"
             on:click={downloadProject}
         />
@@ -492,7 +492,7 @@
                         class="tab"
                         data-active="true"
                     >
-                        <img alt="" src="/images/gui-icons/brick-icon.png" />
+                        <img alt="" src="./images/gui-icons/brick-icon.png" />
                         Blocks
                     </button>
                     <button
@@ -500,7 +500,7 @@
                         bind:this={tabs.images}
                         class="tab"
                     >
-                        <img alt="" src="/images/gui-icons/picture-icon.png" />
+                        <img alt="" src="./images/gui-icons/picture-icon.png" />
                         Images
                     </button>
                     <button
@@ -508,7 +508,7 @@
                         bind:this={tabs.sounds}
                         class="tab"
                     >
-                        <img alt="" src="/images/gui-icons/sound-icon.png" />
+                        <img alt="" src="./images/gui-icons/sound-icon.png" />
                         Sounds
                     </button>
                 </div>
@@ -517,14 +517,14 @@
                     {#if editTarget}
                         <img
                             alt="Edit"
-                            src="/images/gui-icons/user-edit-icon.png"
+                            src="./images/gui-icons/user-edit-icon.png"
                         />
                         <p>Editing {State.getTargetById(editTarget).name}</p>
                     {/if}
                     {#if initializingCode === true}
                         <img
                             alt="Compiling"
-                            src="/images/gui-icons/cog-icon.png"
+                            src="./images/gui-icons/cog-icon.png"
                             style="margin-left:8px;"
                         />
                         <p>Compiling...</p>
@@ -552,8 +552,8 @@
                 >
                     <img
                         src={blocklyToolboxIsVisible
-                            ? "/images/gui-icons/arrow-rotate-left.png"
-                            : "/images/gui-icons/arrow-rotate-right.png"}
+                            ? "./images/gui-icons/arrow-rotate-left.png"
+                            : "./images/gui-icons/arrow-rotate-right.png"}
                         alt="Hide Toolbox"
                     />
                 </button>
@@ -578,7 +578,7 @@
                         <img
                             alt="Run"
                             title="Run"
-                            src="/images/gui-icons/{experiencingProgramUpdate ? 'blank-green' : 'run'}-icon.png"
+                            src="./images/gui-icons/{experiencingProgramUpdate ? 'blank-green' : 'run'}-icon.png"
                         />
                         <div>
                             Compile
@@ -588,7 +588,7 @@
                         <img
                             alt="Exit"
                             title="Exit"
-                            src="/images/gui-icons/stop-icon.png"
+                            src="./images/gui-icons/stop-icon.png"
                         />
                         <div>
                             Exit
@@ -601,7 +601,7 @@
                         <img
                             alt="Fullscreen"
                             title="Fullscreen"
-                            src="/images/gui-icons/fullscreen-icon{insideFullscreen ? '-in' : ''}.png"
+                            src="./images/gui-icons/fullscreen-icon{insideFullscreen ? '-in' : ''}.png"
                         />
                         <div>
                             Fullscreen
@@ -615,7 +615,7 @@
                         <img
                             alt="Debug"
                             title="Debug"
-                            src="/images/gui-icons/application-xp-terminal-icon.png"
+                            src="./images/gui-icons/application-xp-terminal-icon.png"
                         />
                         <div>
                             Debug
@@ -632,7 +632,7 @@
                         class="tab"
                         data-active="true"
                     >
-                        <img alt="" src="/images/gui-icons/bricks-icon.png" />
+                        <img alt="" src="./images/gui-icons/bricks-icon.png" />
                         Properties
                     </button>
                     <button
@@ -640,7 +640,7 @@
                         bind:this={characterTabs.characters}
                         class="tab"
                     >
-                        <img alt="" src="/images/gui-icons/group-icon.png" />
+                        <img alt="" src="./images/gui-icons/group-icon.png" />
                         Characters
                     </button>
                 </div>
@@ -800,7 +800,7 @@
                                     >
                                         <!-- svelte-ignore a11y-img-redundant-alt -->
                                         <img
-                                            src="/images/gui-icons/cancel-icon.png"
+                                            src="./images/gui-icons/cancel-icon.png"
                                             alt="Delete this Character"
                                             title="Delete this Character"
                                             style={State.currentProject.characters
@@ -824,7 +824,7 @@
                                         title={"Create a new Character"}
                                         class="character-image-preview"
                                         style="width:32px;height:32px;image-rendering: pixelated;"
-                                        src={"/images/gui-icons/add-icon.png"}
+                                        src={"./images/gui-icons/add-icon.png"}
                                     />
                                 </button>
                                 <p class="character-preview-name">New</p>

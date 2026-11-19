@@ -8,13 +8,13 @@
 
 <div>
     <img
-        src="/images/icon.png"
+        src="./images/icon.png"
         alt="Clamp Logo"
         class="logo-margin"
         style="height: 100%;"
     />
     <img
-        src="/images/code.png"
+        src="./images/code.png"
         alt="Clamp Coding Logo"
         class="logo-margin"
         style="height: 100%;"
@@ -23,7 +23,7 @@
 
     <NavigationOption
         name="Settings"
-        icon="/images/gui-icons/cog-icon.png"
+        icon="./images/gui-icons/cog-icon.png"
         on:click={() => {
             $activeModals.settings = !$activeModals.settings
         }}
@@ -35,7 +35,7 @@
     >
         <NavigationOption
             name="Credits"
-            icon="/images/gui-icons/information-icon.png"
+            icon="./images/gui-icons/information-icon.png"
         />
     </a>
 </div>

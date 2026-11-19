@@ -316,7 +316,7 @@
                         title={"New Image"}
                         class="image-preview"
                         style="width:32px;height:32px;image-rendering: pixelated;"
-                        src={"/images/gui-icons/add-icon.png"}
+                        src={"./images/gui-icons/add-icon.png"}
                     />
                 </button>
                 <p class="costume-name">New</p>
@@ -329,7 +329,7 @@
                         title={"Import an Image"}
                         class="image-preview"
                         style="width:32px;height:32px;image-rendering: pixelated;"
-                        src={"/images/gui-icons/page-white-put-icon.png"}
+                        src={"./images/gui-icons/page-white-put-icon.png"}
                     />
                 </button>
                 <p class="costume-name">Import</p>
@@ -342,7 +342,7 @@
                         title={"Find an Image from a Library"}
                         class="image-preview"
                         style="width:32px;height:32px;image-rendering: pixelated;"
-                        src={"/images/gui-icons/folder-magnify-icon.png"}
+                        src={"./images/gui-icons/folder-magnify-icon.png"}
                     />
                 </button>
                 <p class="costume-name">Find</p>
@@ -374,7 +374,7 @@
                     >
                         <!-- svelte-ignore a11y-img-redundant-alt -->
                         <img
-                            src="/images/gui-icons/cancel-icon.png"
+                            src="./images/gui-icons/cancel-icon.png"
                             alt="Delete this Image"
                             title="Delete this Image"
                             style={targetObj.costumes

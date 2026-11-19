@@ -21,7 +21,7 @@
         >.
     </p>
     <p>
-        <img alt="run-icon" src="/images/gui-icons/run-icon.png" />
+        <img alt="run-icon" src="./images/gui-icons/run-icon.png" />
         <code>run-icon</code>
         is a custom icon created by JeremyGamer13 based on the style of the others.
     </p>
@@ -30,80 +30,80 @@
         <p>
             <img
                 alt="blank-green-icon"
-                src="/images/gui-icons/blank-green-icon.png"
+                src="./images/gui-icons/blank-green-icon.png"
             />
             <code>blank-green-icon</code>
             was edited by JeremyGamer13. The original is
-            <img alt="accept-icon" src="/images/gui-icons/accept-icon.png" />
+            <img alt="accept-icon" src="./images/gui-icons/accept-icon.png" />
             <code>accept-icon</code>.
         </p>
         <p>
             <img
                 alt="fullscreen-icon"
-                src="/images/gui-icons/fullscreen-icon.png"
+                src="./images/gui-icons/fullscreen-icon.png"
             />
             <code>fullscreen-icon</code>
             was edited by JeremyGamer13. The original is
             <img
                 alt="arrow-out-icon"
-                src="/images/gui-icons/arrow-out-icon.png"
+                src="./images/gui-icons/arrow-out-icon.png"
             />
             <code>arrow-out-icon</code>.
         </p>
         <p>
             <img
                 alt="fullscreen-icon-in"
-                src="/images/gui-icons/fullscreen-icon-in.png"
+                src="./images/gui-icons/fullscreen-icon-in.png"
             />
             <code>fullscreen-icon-in</code>
             was edited by JeremyGamer13. The original is
             <img
                 alt="arrow-out-icon"
-                src="/images/gui-icons/arrow-out-icon.png"
+                src="./images/gui-icons/arrow-out-icon.png"
             />
             <code>arrow-out-icon</code>.
         </p>
         <p>
             <img
                 alt="arrow-rotate-left"
-                src="/images/gui-icons/arrow-rotate-left.png"
+                src="./images/gui-icons/arrow-rotate-left.png"
             />
             <code>arrow-rotate-left</code>
             was edited by JeremyGamer13. The original is
             <img
                 alt="arrow-rotate-clockwise-icon"
-                src="/images/gui-icons/arrow-rotate-clockwise-icon.png"
+                src="./images/gui-icons/arrow-rotate-clockwise-icon.png"
             />
             <code>arrow-rotate-clockwise-icon</code>.
         </p>
         <p>
             <img
                 alt="arrow-rotate-right"
-                src="/images/gui-icons/arrow-rotate-right.png"
+                src="./images/gui-icons/arrow-rotate-right.png"
             />
             <code>arrow-rotate-right</code>
             was edited by JeremyGamer13. The original is
             <img
                 alt="arrow-rotate-clockwise-icon"
-                src="/images/gui-icons/arrow-rotate-clockwise-icon.png"
+                src="./images/gui-icons/arrow-rotate-clockwise-icon.png"
             />
             <code>arrow-rotate-clockwise-icon</code>.
         </p>
         <p>
-            <img alt="loop-icon" src="/images/gui-icons/loop-icon.png" />
+            <img alt="loop-icon" src="./images/gui-icons/loop-icon.png" />
             <code>loop-icon</code>
             was edited by JeremyGamer13. The original is
             <img
                 alt="arrow-rotate-clockwise-icon"
-                src="/images/gui-icons/arrow-rotate-clockwise-icon.png"
+                src="./images/gui-icons/arrow-rotate-clockwise-icon.png"
             />
             <code>arrow-rotate-clockwise-icon</code>.
         </p>
         <p>
-            <img alt="mouse-icon" src="/images/gui-icons/mouse-icon.png" />
+            <img alt="mouse-icon" src="./images/gui-icons/mouse-icon.png" />
             <code>mouse-icon</code>
             was edited by JeremyGamer13. The original is
-            <img alt="cursor-icon" src="/images/gui-icons/cursor-icon.png" />
+            <img alt="cursor-icon" src="./images/gui-icons/cursor-icon.png" />
             <code>cursor-icon</code>.
         </p>
     </details>

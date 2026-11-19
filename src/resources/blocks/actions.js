@@ -12,7 +12,7 @@ const updateFrameTime = () => {
 
 function flagImage(color) {
     return {
-        "src": "/images/gui-icons/flag-" + color + "-icon.png",
+        "src": "./images/gui-icons/flag-" + color + "-icon.png",
         "width": 24,
         "height": 24,
         "alt": color + " flag"
@@ -90,7 +90,7 @@ function register() {
         args0: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/run-icon.png",
+                "src": "./images/gui-icons/run-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "▶",
@@ -117,7 +117,7 @@ function register() {
         args0: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/stop-icon.png",
+                "src": "./images/gui-icons/stop-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "X",
@@ -144,7 +144,7 @@ function register() {
         args0: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/mouse-icon.png",
+                "src": "./images/gui-icons/mouse-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "mouse",

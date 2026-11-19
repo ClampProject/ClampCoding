@@ -1,74 +1,74 @@
 [
     {
         "name": "Blank",
-        "image": "/images/empty64.png"
+        "image": "./images/empty64.png"
     },
     {
         "name": "Apple",
-        "image": "/images/apple.png"
+        "image": "./images/apple.png"
     },
     {
         "name": "Banana",
-        "image": "/images/library/image/banana.png"
+        "image": "./images/library/image/banana.png"
     },
     {
         "name": "Pear",
-        "image": "/images/library/image/pear.png"
+        "image": "./images/library/image/pear.png"
     },
     {
         "name": "Stickman",
-        "image": "/images/library/image/stickman.png"
+        "image": "./images/library/image/stickman.png"
     },
     {
         "name": "Button",
-        "image": "/images/library/image/button_unpressed.png"
+        "image": "./images/library/image/button_unpressed.png"
     },
     {
         "name": "Pressed Button",
-        "image": "/images/library/image/button_pressed.png"
+        "image": "./images/library/image/button_pressed.png"
     },
     {
         "name": "Cursor",
-        "image": "/images/library/image/cursor.png"
+        "image": "./images/library/image/cursor.png"
     },
     {
         "name": "Checkmark",
-        "image": "/images/library/image/checkmark.png"
+        "image": "./images/library/image/checkmark.png"
     },
     {
         "name": "Deny",
-        "image": "/images/library/image/deny.png"
+        "image": "./images/library/image/deny.png"
     },
     {
         "name": "Heart",
-        "image": "/images/library/image/heart.png"
+        "image": "./images/library/image/heart.png"
     },
     {
         "name": "Box",
-        "image": "/images/library/image/box.png"
+        "image": "./images/library/image/box.png"
     },
     {
         "name": "Circle",
-        "image": "/images/library/image/circle.png"
+        "image": "./images/library/image/circle.png"
     },
     {
         "name": "Triangle",
-        "image": "/images/library/image/triangle.png"
+        "image": "./images/library/image/triangle.png"
     },
     {
         "name": "Cube",
-        "image": "/images/library/image/cube.png"
+        "image": "./images/library/image/cube.png"
     },
     {
         "name": "Clamp Logo",
-        "image": "/images/icon.png"
+        "image": "./images/icon.png"
     },
     {
         "name": "Rotating Arrow",
-        "image": "/images/library/image/rotate_right_arrow.png"
+        "image": "./images/library/image/rotate_right_arrow.png"
     },
     {
         "name": "Arrow",
-        "image": "/images/library/image/arrow.png"
+        "image": "./images/library/image/arrow.png"
     }
 ]

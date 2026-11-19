@@ -38,7 +38,7 @@ function register() {
             },
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/application-edit-icon.png",
+                "src": "./images/gui-icons/application-edit-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "my",
@@ -71,7 +71,7 @@ function register() {
             },
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/application-edit-icon.png",
+                "src": "./images/gui-icons/application-edit-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "my",
@@ -98,7 +98,7 @@ function register() {
             },
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/user-edit-icon.png",
+                "src": "./images/gui-icons/user-edit-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "my",
@@ -131,7 +131,7 @@ function register() {
             },
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/user-edit-icon.png",
+                "src": "./images/gui-icons/user-edit-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "my",

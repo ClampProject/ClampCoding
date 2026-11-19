@@ -154,7 +154,7 @@ function register() {
                 "options": [
                     [
                         {
-                            "src": "/images/gui-icons/arrow-rotate-right.png",
+                            "src": "./images/gui-icons/arrow-rotate-right.png",
                             "width": 24,
                             "height": 24,
                             "alt": "Right"
@@ -163,7 +163,7 @@ function register() {
                     ],
                     [
                         {
-                            "src": "/images/gui-icons/arrow-rotate-left.png",
+                            "src": "./images/gui-icons/arrow-rotate-left.png",
                             "width": 24,
                             "height": 24,
                             "alt": "Left"

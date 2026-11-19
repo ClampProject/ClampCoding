@@ -38,7 +38,7 @@ function register() {
         args1: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/loop-icon.png",
+                "src": "./images/gui-icons/loop-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "↺",
@@ -79,7 +79,7 @@ function register() {
         args1: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/loop-icon.png",
+                "src": "./images/gui-icons/loop-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "↺",
@@ -113,7 +113,7 @@ function register() {
         args1: [
             {
                 "type": "field_image",
-                "src": "/images/gui-icons/loop-icon.png",
+                "src": "./images/gui-icons/loop-icon.png",
                 "width": 24,
                 "height": 24,
                 "alt": "↺",
