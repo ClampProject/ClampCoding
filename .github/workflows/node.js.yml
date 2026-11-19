@@ -1,0 +1,37 @@
+name: Node.js CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "${{ github.workflow }}-${{ github.head_ref || github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: setup node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build
+    - name: upload artifact 
+      uses: actions/upload-pages-artifact@v5
+      with:
+        path: ./build/
+    - name: Deploy to GitHub Pages
+      if: github.event_name != 'pull_request' && github.ref == 'refs/heads/develop'
+      uses: actions/deploy-pages@v5.0.1
