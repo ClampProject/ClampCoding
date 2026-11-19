@@ -1,4 +1,4 @@
-import Blockly from "blockly/core";
+import * as Blockly from 'blockly/core';
 import javascriptGenerator from '../javascriptGenerator';
 
 function xmlToCode(xml) {

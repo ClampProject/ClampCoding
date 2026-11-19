@@ -7,7 +7,7 @@
     import { run } from 'svelte/legacy';
 
     import { createEventDispatcher } from "svelte";
-    import Blockly from "blockly/core.js";
+    import * as Blockly from 'blockly/core';
     import registerDynamicCategories from "../../resources/categories";
     /** @type {{config?: any, locale: any, workspace?: any, transform?: any}} */
     let {

@@ -26,9 +26,10 @@
     import { saveFormatVersion } from "../resources/state/download";
     import SettingsAPI from "../resources/editor/settings-api";
 
-    import Blockly from "blockly/core";
+    import * as Blockly from 'blockly/core';
     import DarkTheme from "@blockly/theme-dark";
     import * as ContinuousToolboxPlugin from "@blockly/continuous-toolbox";
+    ContinuousToolboxPlugin.registerContinuousToolbox();
     import Patches from "../patches";
 
     // edit theme stuff so we match scratch a bit
@@ -41,18 +42,16 @@
         size: 12,
     };
 
-    import En from "blockly/msg/en";
+    import * as En from 'blockly/msg/en';
     import "blockly/blocks";
 
     // used by blocks sometimes, but mostly custom scripts
-    import { FieldDependentDropdown } from '@blockly/field-dependent-dropdown';
-    import { FieldColourHsvSliders } from '@blockly/field-colour-hsv-sliders';
-    import { FieldGridDropdown } from '@blockly/field-grid-dropdown';
-    import { FieldSlider } from '@blockly/field-slider';
-    Blockly.FieldDependentDropdown = FieldDependentDropdown;
-    Blockly.FieldColourHsvSliders = FieldColourHsvSliders;
-    Blockly.FieldGridDropdown = FieldGridDropdown;
-    Blockly.FieldSlider = FieldSlider;
+    import '@blockly/field-dependent-dropdown';
+    import '@blockly/field-colour-hsv-sliders';
+    import '@blockly/field-grid-dropdown';
+    import '@blockly/field-slider';
+    import {registerFieldAngle} from '@blockly/field-angle';
+    registerFieldAngle();
 
     import BlocklyComponent from "#lib/svelte-blockly/index.js";
     let blocklyToolboxIsVisible = true;

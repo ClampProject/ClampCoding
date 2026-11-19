@@ -6,7 +6,7 @@ export default (Blockly, config) => {
     // patch Blockly to add a max width to the toolbox
     // note, some code for handling RTL is removed here
     // some code for something about Workspace with no scrollbars where this is permanently open on the left. is also removed
-    Blockly.VerticalFlyout.prototype.reflowInternal_ = function () {
+    /*Blockly.VerticalFlyout.prototype.reflowInternal_ = function () {
         this.workspace_.scale = this.getFlyoutScale();
         let flyoutWidth = 0;
         const blocks = this.workspace_.getTopBlocks(false);
@@ -41,5 +41,5 @@ export default (Blockly, config) => {
             this.targetWorkspace.resizeContents();
             this.targetWorkspace.recordDragTargets();
         }
-    };
+    };*/
 };

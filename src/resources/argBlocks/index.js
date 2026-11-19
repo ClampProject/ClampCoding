@@ -1,4 +1,4 @@
-import Blockly from 'blockly/core';
+import * as Blockly from 'blockly/core';
 import javascriptGenerator from '../javascriptGenerator';
 
 // cloned from https://github.com/google/blockly/blob/a6d6393748776a0945cca98444275d2fb2b55640/core/block.ts#L1085
@@ -69,7 +69,7 @@ export default (arg, color, name, block) => {
             }
         };
 
-        javascriptGenerator[newBlockName] = (block) => {
+        javascriptGenerator.forBlock[newBlockName] = (block) => {
             const value = block.getFieldValue(arg.name);
             return [JSON.stringify(value), javascriptGenerator.ORDER_NONE];
         }
